@@ -51,41 +51,21 @@ int fulfill_order(unsigned short id, int num) {
   return 0;
 }
 
-#ifdef NOT
 /* Return a pointer to the first section in the aisles with the given item id
  * that has no items in it or NULL if no such section exists. Only consider
  * items stored in sections in the aisles (i.e., ignore anything in the
  * stockroom). Break ties by returning the section with the lowest address.
  */
-unsigned short* empty_section_with_id(unsigned short id) {
-  // TODO: implement this function
-  return NULL;
-}
-
-/* Return a pointer to the section with the most items in the store. Only
- * consider items stored in sections in the aisles (i.e., ignore anything in
- * the stockroom). Break ties by returning the section with the lowest address.
- */
-unsigned short* section_with_most_items() {
-  // TODO: implement this function
-  return NULL;
-}
-#endif
-
-// Returns the aisle and section index of the first section with the given id 
-// that has no items in it.
-// Returns -1, -1 if no such section exists.
-//
-// Breaks ties by returning the section with the lowest aisle index then section index.
 struct aisle_section empty_section_with_id(unsigned short id) {
 //TODO: implement this function
   struct aisle_section result = {-1,-1};
   return result;
 }
 
-// Returns the aisle and section index of the section with the highest inventory in the store.
-//
-// Breaks ties by returning the section with the lowest aisle index then section index.
+/* Return a pointer to the section with the most items in the store. Only
+ * consider items stored in sections in the aisles (i.e., ignore anything in
+ * the stockroom). Break ties by returning the section with the lowest address.
+ */
 struct aisle_section section_with_most_items() {
 //TODO: implement this function
   struct aisle_section result = {-1,-1};
